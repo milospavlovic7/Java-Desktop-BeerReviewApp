@@ -1,67 +1,85 @@
 # 🍺 Java Desktop BeerReviewApp
 
-**Java Desktop BeerReviewApp** je desktop aplikacija za ocenjivanje i recenziju piva. Aplikacija koristi Swing GUI, klijent-server arhitekturu preko Java soketa, MySQL bazu podataka i MVC obrazac. Omogućava interakciju dva tipa korisnika – **Korisnik** i **Pivara** – kroz intuitivan korisnički interfejs.
+**Java Desktop BeerReviewApp** is a desktop application for beer rating and reviewing. The app uses Swing GUI, client-server architecture via Java sockets, a MySQL database, and the MVC pattern. It supports two types of users – **User** and **Brewery** – interacting through an intuitive interface.
 
 ---
 
-## 🧩 Ključne funkcionalnosti
+## 🧩 Key Features
 
-- ✅ **Registracija i prijava** za oba tipa korisnika (korisnik i pivara)
-- 🧾 **Korisnici** mogu:
-  - Dodavati recenzije i ocene piva
-  - Pretraživati piva i pivare
-  - Pratiti omiljena piva
-  - Uređivati svoj profil
-- 🏭 **Pivare** mogu:
-  - Dodavati nova piva
-  - Pratiti i moderirati recenzije svojih piva
-  - Uređivati informacije o pivari
-- 🔗 Klijent-server komunikacija putem **Java soketa**
-- 🗃 Povezanost sa **MySQL** bazom podataka
-- 🧠 Organizacija koda po **MVC arhitekturi**
+- ✅ **Registration and login** for both user types (User and Brewery)
+- 🧾 **Users** can:
+  - Add reviews and rate beers
+  - Search beers and breweries
+  - Follow favorite beers
+  - Edit their profile
+  - Delete their account, reviews, and beers from their favorites list
+- 🏭 **Breweries** can:
+  - Add new beers
+  - View reviews of their beers
+  - Edit information about their beers
+  - Edit their profile
+  - Delete their account and their beers
+- 🔗 Client-server communication via **Java sockets**
+- 🗃 Connection to **MySQL** database
+- 🧠 Organized code using the **MVC architecture**
 
 ---
 
-## 🛠 Tehnologije
+## 🛠 Technologies
 
 - **Java SE**
 - **Java Swing** (GUI)
 - **Socket Programming** (TCP/IP)
 - **MySQL**
 - **NetBeans IDE**
-- **MVC (Model-View-Controller)** obrazac
+- **MVC (Model-View-Controller)** pattern
 
 ---
 
-## 📁 Struktura projekta
+## 📁 Project Structure
 
-Recenzije Piva Projekat/
+```
+BeerReviewProject/
 │
-├── klijent/ # GUI aplikacija koju koriste korisnici i pivare
-├── server/ # Server koji obradi zahteve i komunicira sa bazom
-├── zajednicki/ # Deljeni modeli i klase (DTO, entiteti, itd.)
+├── client/            # GUI application used by users and breweries
+├── server/            # Server handling requests and database communication
+├── shared/            # Shared models and classes (DTOs, entities, etc.)
 └── README.md
-
-yaml
-Copy
-Edit
+```
 
 ---
 
-## 🧪 Pokretanje aplikacije (lokalno)
+## 🧪 Running the Application Locally
 
-1. **Kloniraj repozitorijum:**
+1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/milospavlovic7/Java-Desktop-BeerReviewApp.git
-Importuj SQL bazu:
-U MySQL Workbench/phpMyAdmin importuj priloženi .sql fajl (ako postoji).
+   ```
 
-Pokreni server:
+2. **Import the SQL database:**
 
-Otvori server projekat u NetBeans-u i pokreni glavnu klasu (Main)
+   Import the provided `.sql` file (if available) into your MySQL using Workbench or phpMyAdmin.
 
-Pokreni klijentsku aplikaciju:
+3. **Start the server:**
 
-Otvori klijent projekat i pokreni glavnu klasu (Main)
+   - Open the `server` project in NetBeans and run the main class (`Main`).
 
-Kreiraj korisničke naloge i testiraj aplikaciju
+4. **Start the client application:**
+
+   - Open the `client` project in NetBeans and run the main class (`Main`).
+
+5. **Create user accounts and test the app.**
+
+---
+
+## 📄 License
+
+This project is open-source and intended for educational and personal use.
+
+---
+
+## 👨‍💻 Author
+
+- Miloš Pavlović  
+- [GitHub: milospavlovic7](https://github.com/milospavlovic7)
