@@ -39,12 +39,110 @@
 ## 📁 Project Structure
 
 ```
-BeerReviewProject/
+/Projekat
 │
-├── client/            # GUI application used by users and breweries
-├── server/            # Server handling requests and database communication
-├── shared/            # Shared models and classes (DTOs, entities, etc.)
-└── README.md
+├── /BeerReviewKlijent
+│   ├── /controller
+│   │   └── ClientController.java
+│   ├── /forms
+│   │   ├── IzborTipaKorisnikaForm.form
+│   │   ├── IzborTipaKorisnikaForm.java
+│   │   ├── /korisnik
+│   │   │   ├── DodajRecenzijuForm.form
+│   │   │   ├── DodajRecenzijuForm.java
+│   │   │   ├── KorisnikLoginForm.form
+│   │   │   ├── KorisnikLoginForm.java
+│   │   │   ├── KorisnikMainForm.form
+│   │   │   ├── KorisnikMainForm.java
+│   │   │   ├── KorisnikRegisterForm.form
+│   │   │   ├── KorisnikRegisterForm.java
+│   │   │   ├── PanelNalogKorisnik.form
+│   │   │   ├── PanelNalogKorisnik.java
+│   │   │   ├── PanelPretraga.form
+│   │   │   ├── PanelPretraga.java
+│   │   │   ├── PanelRecenzije.form
+│   │   │   └── PanelRecenzije.java
+│   │   └── /pivara
+│   │       ├── DodajPivoForm.form
+│   │       ├── DodajPivoForm.java
+│   │       ├── PanelNalogPivara.form
+│   │       ├── PanelNalogPivara.java
+│   │       ├── PanelPiva.form
+│   │       ├── PanelPiva.java
+│   │       ├── PivaraLoginForm.form
+│   │       ├── PivaraLoginForm.java
+│   │       ├── PivaraMainForm.form
+│   │       ├── PivaraMainForm.java
+│   │       ├── PivaraRegisterForm.form
+│   │       └── PivaraRegisterForm.java
+│   ├── /models
+│   │   ├── TableModelPretraga.java
+│   │   └── TableModelRecenzije.java
+│   ├── /service
+│   │   ├── KorisnikService.java
+│   │   └── PivaraService.java
+│   └── /session
+│       └── Session.java
+│
+├── /BeerReviewServer
+│   ├── /controller
+│   │   └── ServerController.java
+│   ├── /db
+│   │   └── DBBroker.java
+│   ├── /forms
+│   │   ├── KonfiguracijaBaze.form
+│   │   ├── KonfiguracijaBaze.java
+│   │   ├── ServerForm.form
+│   │   └── ServerForm.java
+│   ├── /so
+│   │   ├── AbstractSO.java
+│   │   ├── /korisnik
+│   │   │   ├── SODeleteKorisnik.java
+│   │   │   ├── SOGetAllKorisnik.java
+│   │   │   ├── SOLoginKorisnik.java
+│   │   │   ├── SORegisterKorisnik.java
+│   │   │   └── SOUpdateKorisnik.java
+│   │   ├── /omiljenoPivo
+│   │   │   ├── SOAddOmiljenoPivo.java
+│   │   │   ├── SODeleteOmiljenoPivo.java
+│   │   │   └── SOGetAllOmiljenoPivoZaKorisnika.java
+│   │   ├── /pivara
+│   │   │   ├── SODeletePivara.java
+│   │   │   ├── SOGetAllPivara.java
+│   │   │   ├── SOLoginPivara.java
+│   │   │   ├── SORegisterPivara.java
+│   │   │   └── SOUpdatePivara.java
+│   │   ├── /pivo
+│   │   │   ├── SOAddPivo.java
+│   │   │   ├── SODeletePivo.java
+│   │   │   ├── SOGetAllPivo.java
+│   │   │   ├── SOGetAllPivoZaPivaru.java
+│   │   │   └── SOUpdatePivo.java
+│   │   └── /recenzija
+│   │       ├── SOAddRecenzija.java
+│   │       ├── SODeleteRecenzija.java
+│   │       ├── SOGetAllRecenzija.java
+│   │       ├── SOGetAllZaPivoRecenzija.java
+│   │       ├── SOGetRecenzija.java
+│   │       └── SOUpdateRecenzija.java
+│   └── /thread
+│       ├── ThreadClient.java
+│       └── ThreadServer.java
+│
+├── /BeerReviewZajednicki
+│   ├── /domain
+│   │   ├── AbstractDomainObject.java
+│   │   ├── Korisnik.java
+│   │   ├── OmiljenoPivo.java
+│   │   ├── Pivara.java
+│   │   ├── Pivo.java
+│   │   └── Recenzija.java
+│   └── /transfer
+│       ├── Request.java
+│       ├── Response.java
+│       └── /util
+│           ├── Operation.java
+│           └── ResponseStatus.java
 ```
 
 ---
